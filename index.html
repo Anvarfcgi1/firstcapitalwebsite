@@ -1,1 +1,832 @@
+<title>First Capital Group | Exceptional Properties</title>
 
+<style>
+:root {
+  --black: #171714;
+  --ivory: #f8f6f1;
+  --gold: #b69a62;
+  --white: #ffffff;
+  --gray: #77756f;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--black);
+  background: var(--ivory);
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1180px, 90%);
+  margin: auto;
+}
+
+.topbar {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 9px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+header {
+  background: var(--ivory);
+  border-bottom: 1px solid #ded8cb;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  min-height: 88px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  font-family: Georgia, serif;
+  font-size: 23px;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.logo span {
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  font-weight: normal;
+  letter-spacing: 4px;
+  color: var(--gold);
+  text-align: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav-links a:hover {
+  color: var(--gold);
+}
+
+.nav-contact {
+  background: var(--black);
+  color: white;
+  padding: 12px 20px;
+}
+
+.hero {
+  min-height: 610px;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.72), rgba(0,0,0,.12)),
+    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=85")
+    center/cover;
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.hero-content {
+  max-width: 720px;
+  padding: 90px 0;
+}
+
+.eyebrow {
+  color: var(--gold);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: clamp(40px, 6vw, 76px);
+  line-height: 1.08;
+  margin-bottom: 24px;
+}
+
+.hero p {
+  font-size: 17px;
+  max-width: 570px;
+  color: #eeeae1;
+  margin-bottom: 32px;
+}
+
+.gold-button {
+  display: inline-block;
+  background: var(--gold);
+  color: white;
+  padding: 15px 27px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 12px;
+  transition: .3s;
+}
+
+.gold-button:hover {
+  background: #927642;
+}
+
+.section {
+  padding: 85px 0;
+}
+
+.section-title {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: clamp(30px, 4vw, 45px);
+  margin-bottom: 18px;
+}
+
+.section-intro {
+  color: var(--gray);
+  max-width: 680px;
+  margin-bottom: 40px;
+}
+
+.center {
+  text-align: center;
+}
+
+.gold-line {
+  width: 65px;
+  height: 2px;
+  background: var(--gold);
+  margin: 20px 0 25px;
+}
+
+.center .gold-line {
+  margin: 20px auto 25px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.about-photo {
+  min-height: 420px;
+  background:
+    url("https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1100&q=85")
+    center/cover;
+}
+
+.about-copy p {
+  color: var(--gray);
+  margin-bottom: 18px;
+}
+
+.stats {
+  background: var(--black);
+  color: white;
+  padding: 45px 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  text-align: center;
+  gap: 20px;
+}
+
+.stat strong {
+  color: var(--gold);
+  font-family: Georgia, serif;
+  font-size: 34px;
+  display: block;
+  font-weight: normal;
+}
+
+.stat span {
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+@media(max-width:800px) {
+  .nav {
+    flex-direction: column;
+    padding: 18px 0;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    min-height: 520px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+</style>
+</head><body>
+
+<div class="topbar">
+  SERVING MIAMI-DADE · BROWARD · PALM BEACH
+</div>
+
+<header>
+  <div class="container nav">
+    <a href="#home" class="logo">
+      FIRST CAPITAL GROUP
+      <span>REAL ESTATE · EST. 1989</span>
+    </a>
+
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About Us</a>
+      <a href="#properties">Properties</a>
+      <a href="#pinecrest">Luxury Living</a>
+      <a href="#contact" class="nav-contact">Contact Us</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container">
+    <div class="hero-content">
+      <div class="eyebrow">Discover the Art of Luxury Living</div>
+
+      <h1>EXCEPTIONAL PROPERTIES.<br>
+      EXCEPTIONAL OPPORTUNITIES.</h1>
+
+      <p>
+        Explore extraordinary homes throughout Miami, Broward,
+        and the Tri-County area. From luxury estates to attainable
+        homeownership, First Capital Group is here to help you
+        find your place.
+      </p>
+
+      <a href="#properties" class="gold-button">
+        Explore Properties
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <div class="container about-grid">
+
+    <div class="about-photo" role="img"
+         aria-label="Beautiful luxury South Florida home"></div>
+
+    <div class="about-copy">
+      <div class="eyebrow">Welcome to First Capital Group</div>
+
+      <h2 class="section-title">
+        Real Estate Expertise.<br>
+        Personal Service.
+      </h2>
+
+      <div class="gold-line"></div>
+
+      <p>
+        At First Capital Group, Inc., we believe finding a home
+        should be an extraordinary experience. Whether you are
+        purchasing your first home, searching for a luxury estate,
+        or exploring an investment opportunity, our team is
+        dedicated to helping you reach your real estate goals.
+      </p>
+
+      <p>
+        We proudly serve Miami-Dade, Broward, and Palm Beach
+        County, providing professional guidance and personalized
+        attention throughout the real estate process.
+      </p>
+
+      <a href="#contact" class="gold-button">Meet Our Team</a>
+    </div>
+
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container stats-grid">
+
+    <div class="stat">
+      <strong>1989</strong>
+      <span>Founded in Miami</span>
+    </div>
+
+    <div class="stat">
+      <strong>35+</strong>
+      <span>Years of Experience</span>
+    </div>
+
+    <div class="stat">
+      <strong>3</strong>
+      <span>Counties Served</span>
+    </div>
+
+  </div>
+</section>
+
+<section class="section" id="properties">
+  <div class="container">
+
+    <div class="center">
+      <div class="eyebrow">Find Your Next Property</div>
+      <h2 class="section-title">Featured Properties</h2>
+      <div class="gold-line"></div>
+      <p class="section-intro" style="margin-left:auto;margin-right:auto">
+        Discover available homes for sale and rent throughout
+        South Florida. Let us help you find the right property.
+      </p>
+    </div>
+
+    <div class="property-grid">
+
+      <article class="property-card">
+        <img
+          src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=900&q=80"
+          alt="Residential property in Fort Lauderdale">
+
+        <div class="property-info">
+          <span class="property-status">FOR SALE</span>
+          <h3>7840 NW 50th St, Apt 401</h3>
+          <p>Fort Lauderdale, FL 33351</p>
+          <a href="#contact" class="property-link">
+            Inquire About This Property →
+          </a>
+        </div>
+      </article>
+
+      <article class="property-card">
+        <img
+          src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=900&q=80"
+          alt="Residential property in Homestead">
+
+        <div class="property-info">
+          <span class="property-status">FOR SALE</span>
+          <h3>27562 SW 139th Pl</h3>
+          <p>Homestead, FL 33032</p>
+          <a href="#contact" class="property-link">
+            Inquire About This Property →
+          </a>
+        </div>
+      </article>
+
+      <article class="property-card">
+        <img
+          src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=900&q=80"
+          alt="Furnished rental home in Miami">
+
+        <div class="property-info">
+          <span class="property-status rent">FOR RENT</span>
+          <h3>11330 SW 115th Ter</h3>
+          <p>Miami, FL 33176</p>
+          <a href="#contact" class="property-link">
+            Inquire About This Property →
+          </a>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<section class="section pinecrest" id="pinecrest">
+  <div class="container pinecrest-grid">
+
+    <div>
+      <div class="eyebrow">South Florida Luxury</div>
+
+      <h2 class="section-title">
+        Discover the Beauty of Pinecrest
+      </h2>
+
+      <div class="gold-line"></div>
+
+      <p>
+        Experience beautiful homes, elegant architecture,
+        spacious properties, and the exceptional lifestyle
+        South Florida has to offer.
+      </p>
+
+      <p>
+        From established neighborhoods to extraordinary
+        estates, let First Capital Group help you discover
+        your next home.
+      </p>
+
+      <a href="#contact" class="gold-button">
+        Find Your Dream Home
+      </a>
+    </div>
+
+    <div class="pinecrest-photo"
+         role="img"
+         aria-label="Luxury estate in South Florida"></div>
+
+  </div>
+</section>
+
+<section class="section history">
+  <div class="container history-content center">
+
+    <div class="eyebrow">Our Story</div>
+
+    <h2 class="section-title">
+      A Legacy of Real Estate Service
+    </h2>
+
+    <div class="gold-line"></div>
+
+    <p>
+      First Capital Group, Inc was founded in August of 1989
+      by Miami Real Estate Broker Anvar B. Moghaddam. The main
+      objective has always been to serve Miami-Dade, Broward,
+      and Palm Beach County with any Real Estate needs.
+    </p>
+
+    <p>
+      First Capital Group, Inc. has been successful as a Real
+      Estate company for over 20 years helping the citizens
+      of South Florida purchase properties and help understand
+      and execute real estate instruments. With our dedicated
+      team we tackle any deal.
+    </p>
+
+    <h3>Anvar B. Moghaddam</h3>
+    <span class="founder-title">Principal · Real Estate Broker</span>
+
+  </div>
+</section>
+
+</main>
+<style>
+.property-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  margin-top: 35px;
+}
+
+.property-card {
+  background: white;
+  box-shadow: 0 5px 25px rgba(0,0,0,.06);
+  transition: transform .3s;
+}
+
+.property-card:hover {
+  transform: translateY(-6px);
+}
+
+.property-card img {
+  width: 100%;
+  height: 245px;
+  object-fit: cover;
+}
+
+.property-info {
+  padding: 25px;
+}
+
+.property-status {
+  display: inline-block;
+  background: var(--gold);
+  color: white;
+  font-size: 10px;
+  letter-spacing: 2px;
+  padding: 6px 12px;
+}
+
+.property-status.rent {
+  background: var(--black);
+}
+
+.property-info h3 {
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 15px 0 5px;
+}
+
+.property-info p {
+  color: var(--gray);
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.property-link {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--gold);
+}
+
+.pinecrest {
+  background: #eeebe3;
+}
+
+.pinecrest-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: center;
+}
+
+.pinecrest-grid p {
+  color: var(--gray);
+  margin-bottom: 20px;
+}
+
+.pinecrest-photo {
+  min-height: 420px;
+  background:
+    url("https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85")
+    center/cover;
+}
+
+.history {
+  background: white;
+}
+
+.history-content {
+  max-width: 850px;
+}
+
+.history-content p {
+  color: var(--gray);
+  margin: 20px auto;
+}
+
+.history-content h3 {
+  font-family: Georgia, serif;
+  font-size: 25px;
+  margin-top: 35px;
+  font-weight: normal;
+}
+
+.founder-title {
+  color: var(--gold);
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.contact {
+  background: var(--black);
+  color: white;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 55px;
+}
+
+.contact-copy p {
+  color: #c6c2b9;
+  margin: 18px 0;
+}
+
+.contact-details {
+  margin-top: 30px;
+}
+
+.contact-details p {
+  margin: 13px 0;
+}
+
+.contact-details strong {
+  color: var(--gold);
+}
+
+.contact-form {
+  background: white;
+  color: var(--black);
+  padding: 35px;
+}
+
+.contact-form h3 {
+  font-family: Georgia, serif;
+  font-size: 27px;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd8ce;
+  background: #faf9f6;
+  font: inherit;
+  font-size: 14px;
+}
+
+.contact-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.contact-form button {
+  border: 0;
+  cursor: pointer;
+  width: 100%;
+  font: inherit;
+}
+
+footer {
+  background: #10100e;
+  color: white;
+  padding: 45px 0 25px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-brand {
+  font-family: Georgia, serif;
+  font-size: 22px;
+}
+
+.footer-brand span {
+  display: block;
+  font-family: Arial, sans-serif;
+  font-size: 9px;
+  color: var(--gold);
+  letter-spacing: 3px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 12px;
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+}
+
+.copyright {
+  border-top: 1px solid #383832;
+  margin-top: 30px;
+  padding-top: 20px;
+  color: #aaa69d;
+  font-size: 11px;
+  text-align: center;
+}
+
+@media(max-width:800px) {
+  .property-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pinecrest-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-form {
+    padding: 25px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+</style>
+
+<section class="section contact" id="contact">
+  <div class="container contact-grid">
+
+    <div class="contact-copy">
+      <div class="eyebrow">Let's Find Your Next Home</div>
+
+      <h2 class="section-title">
+        Your Real Estate Journey Starts Here.
+      </h2>
+
+      <div class="gold-line"></div>
+
+      <p>
+        Whether you are buying, selling, renting, or exploring
+        your next investment, our team is ready to assist.
+        Contact First Capital Group today.
+      </p>
+
+      <div class="contact-details">
+        <p><strong>PHONE</strong><br>
+        <a href="tel:3055763730">305-576-3730</a></p>
+
+        <p><strong>EMAIL</strong><br>
+        <a href="mailto:fgroupin2@gmail.com">
+          fgroupin2@gmail.com
+        </a></p>
+
+        <p><strong>ADDRESS</strong><br>
+        2800 Biscayne Blvd., Suite 400<br>
+        Miami, FL 33137</p>
+      </div>
+    </div>
+
+    <form class="contact-form"
+      action="mailto:fgroupin2@gmail.com"
+      method="post"
+      enctype="text/plain">
+
+      <h3>Contact Our Team</h3>
+
+      <input type="text" name="Name"
+        placeholder="Your Full Name" required>
+
+      <input type="email" name="Email"
+        placeholder="Your Email Address" required>
+
+      <input type="tel" name="Phone"
+        placeholder="Your Telephone Number">
+
+      <textarea name="Message"
+        placeholder="How can we help you?"
+        required></textarea>
+
+      <button type="submit" class="gold-button">
+        Send Inquiry
+      </button>
+    </form>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+
+    <div class="footer-content">
+      <div class="footer-brand">
+        FIRST CAPITAL GROUP
+        <span>REAL ESTATE · SOUTH FLORIDA</span>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#properties">Properties</a>
+        <a href="#pinecrest">Luxury Living</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+
+    <div class="copyright">
+      © 2026 First Capital Group, Inc.
+      All Rights Reserved. Miami, Florida.
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
